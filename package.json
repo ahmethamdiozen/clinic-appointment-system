@@ -1,0 +1,17 @@
+{
+  "name": "dentabook",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"pnpm --filter api dev\" \"pnpm --filter web dev\"",
+    "build": "pnpm --filter shared build && pnpm --filter api build && pnpm --filter web build",
+    "lint": "pnpm --recursive lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}
